@@ -3,15 +3,13 @@ package com.trantor.batchmate.service;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.struts2.dispatcher.SessionMap;
-import org.apache.struts2.interceptor.SessionAware;
 
 import com.trantor.batchmate.dao.UserDAOImpl;
 import com.trantor.batchmate.model.UserBean;
 
-public class LoginServiceImpl implements LoginService, SessionAware{
+public class LoginServiceImpl implements LoginService{
 
-	private Map<String, Object> sessionMap= new HashMap<String, Object>();
+	
 	
 	UserDAOImpl userDao;
 
@@ -50,14 +48,9 @@ public class LoginServiceImpl implements LoginService, SessionAware{
 				
 		if (dbUser.getUserPassword().equals(user.getUserPassword())
 				&& dbUser.getUserType().equalsIgnoreCase(user.getUserType())) {
-			 //sessionMap.put("userName", dbUser.getUserName());
-			sessionMap.put("username", username);
-			//System.out.println(dbUser.getUserType());
+	
 			
 			
-			if (sessionMap.containsKey("userName")) {
-	            System.out.println("Value is here"+sessionMap.get("userName"));
-	        }
 			if (dbUser.getUserType() .equals("operator")) {
 				result = "operator";
 			} else {
@@ -69,11 +62,7 @@ public class LoginServiceImpl implements LoginService, SessionAware{
 		return result;
 	}
 
-	@Override
-	public void setSession(Map<String, Object>map) {
-		sessionMap = (Map<String, Object>)map;
-		// TODO Auto-generated method stub
-		
+
 	}
 
-}
+

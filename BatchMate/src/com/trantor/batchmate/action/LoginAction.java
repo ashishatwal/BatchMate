@@ -42,7 +42,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		String result = getLoginservice().verifyUser(user);
 		String loggedUser = user.getUserName();
 		if(result == "operator"){
-			sessionMap.put("loggedUser",loggedUser);
+			sessionMap.put("userName",loggedUser);
 			return "operatorSuccess";
 		}
 		else if(result == "admin"){

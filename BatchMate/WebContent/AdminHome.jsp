@@ -36,7 +36,7 @@
    </div>
    <div class="dropdown" id="adminDropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-     style="color: black"><i></i><b class="caret"></b></a>
+     style="color: black"><s:property value="#sesssion.userName"/><b class="caret"></b></a>
 <s:property value="#session.username"/>
     <ul class="dropdown-menu" style="min-width: 80px">
      <li><a href="#"
