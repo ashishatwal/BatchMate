@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	    <%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -35,8 +36,8 @@
    </div>
    <div class="dropdown" id="adminDropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-     style="color: black">Hello Admin<b class="caret"></b></a>
-
+     style="color: black"><i></i><b class="caret"></b></a>
+<s:property value="#session.username"/>
     <ul class="dropdown-menu" style="min-width: 80px">
      <li><a href="#"
       style="padding-left: 10px; padding-right: 10px"><i

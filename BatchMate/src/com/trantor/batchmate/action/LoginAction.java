@@ -33,13 +33,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public String execute() {
 	
-		UserBean encrypted_user=new UserBean();
+		/*UserBean encrypted_user=new UserBean();
 		
 		encrypted_user.setUserName(user.getUserName());
 		encrypted_user.setUserPassword(EncryptionUtility.encrypt(user.getUserPassword()));//Encrypt
-		encrypted_user.setUserType(user.getUserType());
+		encrypted_user.setUserType(user.getUserType());*/
 		
-		String result = getLoginservice().verifyUser(encrypted_user);
+		String result = getLoginservice().verifyUser(user);
 		String loggedUser = user.getUserName();
 		if(result == "operator"){
 			sessionMap.put("loggedUser",loggedUser);

@@ -28,7 +28,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 	<property name="url" value="jdbc:mysql://localhost:3306/batchmate"></property>
 	<property name="username" value="root"></property>
-	<property name="password" value="ank"></property>
+	<property name="password" value="root"></property>
 </bean>
 
 <bean id="userDao" class="com.trantor.batchmate.dao.UserDAOImpl">
