@@ -71,7 +71,7 @@ public class LoginServiceImpl implements LoginService, SessionAware{
 
 	@Override
 	public void setSession(Map<String, Object>map) {
-		sessionMap = (SessionMap<String, Object>)map;
+		sessionMap = (Map<String, Object>)map;
 		// TODO Auto-generated method stub
 		
 	}
